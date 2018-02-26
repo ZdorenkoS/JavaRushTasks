@@ -4,13 +4,12 @@ package com.javarush.task.task18.task1827;
 Прайсы
 */
 
-import sun.nio.cs.UTF_32;
 
-import java.io.*;
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.TreeSet;
+
+import java.io.BufferedReader;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.InputStreamReader;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
