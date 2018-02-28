@@ -1,6 +1,7 @@
 package com.javarush.task.task20.task2025;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /*
 Алгоритмы-числа
@@ -17,7 +18,8 @@ public class Solution {
                 summ += Math.pow(Long.valueOf(""+ cifri[j]),cifri.length);
 
             }
-            if (summ==i) {result[count]=i; count++;}
+            if (summ==i) {result[count]=i; count++;
+                System.out.println(i);}
         }
 
         return result;
@@ -25,6 +27,9 @@ public class Solution {
 
     public static void main(String[] args) {
 
+        Date d = new Date();
+        getNumbers(2147483647l);
+        System.out.println((new Date().getTime()-d.getTime())/1000);
 
 
     }
