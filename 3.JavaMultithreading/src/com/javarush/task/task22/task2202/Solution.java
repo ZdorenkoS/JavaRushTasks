@@ -9,14 +9,21 @@ public class Solution {
     }
 
     public static String getPartOfString(String string) {
+        if (string == null) {
+            throw new TooShortStringException();
+        }
         String []s = string.split(" ");
         StringBuilder sb = new StringBuilder();
-        if (s.length<3) throw new TooShortStringException();
+       try {
         for (int i = 1; i <5 ; i++) {
             sb.append(s[i]+" ");
         }
 
-        return  sb.toString().trim();
+        return  sb.toString().trim();}
+        catch (RuntimeException r) {
+           if ((string.length() - string.replace(" ", "").length()) < 4) throw new TooShortStringException();
+        return null;
+       }
     }
 
     public static class TooShortStringException extends RuntimeException {
