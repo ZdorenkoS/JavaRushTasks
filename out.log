@@ -3581,3 +3581,64 @@
 2018-03-11 22:51:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
 2018-03-11 22:52:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
 2018-03-11 22:53:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 22:54:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 22:55:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 22:56:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 22:57:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 22:58:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 22:59:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:00:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:01:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:02:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:03:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:04:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:05:13 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:05:41 WARN  JavaRushUtil.getCurrentTask(68) - Ошибка получения ключа задачи.
+2018-03-11 23:05:41 WARN  JavaRushUtil.getCurrentTask(68) - Ошибка получения ключа задачи.
+2018-03-11 23:05:41 WARN  JavaRushUtil.getCurrentTask(68) - Ошибка получения ключа задачи.
+2018-03-11 23:15:00 ERROR ApacheHttpClient.isServerUpdatesNow(484) - Ошибка во время проверки доступности сервера. : java.util.concurrent.ExecutionException
+2018-03-11 23:15:00 WARN  SelectTaskButton.checkServerAvailable(68) - Сервер Javarush обновляется. Подождите немного, перезапустите IntelliJ IDEA и повторите попытку.
+2018-03-11 23:15:35 ERROR ApacheHttpClient.isServerUpdatesNow(484) - Ошибка во время проверки доступности сервера. : java.util.concurrent.ExecutionException
+2018-03-11 23:15:35 WARN  SelectTaskButton.checkServerAvailable(68) - Сервер Javarush обновляется. Подождите немного, перезапустите IntelliJ IDEA и повторите попытку.
+2018-03-11 23:22:14 INFO  JavaRushTasksProjectComponent.projectClosing(162) - ---------- Project JavaRushTasks closed ----------
+
+2018-03-11 23:22:14 WARN  JavaRushUtil.getCurrentTask(68) - Ошибка получения ключа задачи.
+2018-03-11 23:22:35 ERROR ApacheHttpClient.getTask(417) - Ошибка во время выгрузки задачи. Убедитесь в доступности сети и попробуйте снова. : java.util.concurrent.ExecutionException
+2018-03-11 23:22:56 ERROR ApacheHttpClient.getTask(417) - Ошибка во время выгрузки задачи. Убедитесь в доступности сети и попробуйте снова. : java.util.concurrent.ExecutionException
+2018-03-11 23:30:55 INFO  JavaRushTasksProjectComponent.projectOpened(68) - ---------- Project JavaRushTasks opened ----------
+
+2018-03-11 23:30:55 INFO  ApacheHttpClient.createAsyncHttpClient(126) - Выбрано 1 прокси.
+2018-03-11 23:30:55 INFO  ApacheHttpClient.<init>(87) - ApacheHttpClient проинстанциирован успешно.
+2018-03-11 23:30:55 INFO  ApacheHttpClient.testConnection(184) - responseCode = 200
+2018-03-11 23:30:55 INFO  ApacheHttpClient.testConnection(192) - result = true
+2018-03-11 23:30:55 INFO  ApacheHttpClient.login(216) - Ожидание ответа сервера.
+2018-03-11 23:30:55 INFO  ApacheHttpClient.login(220) - responseCode = 200
+2018-03-11 23:30:55 INFO  ApacheHttpClient.login(251) - JSESSIONID=663CC64A86A576694ADF03E48011A14B
+2018-03-11 23:30:55 INFO  ApacheHttpClient.refreshUserInfo(279) - responseCode = 200
+2018-03-11 23:30:56 INFO  ApacheHttpClient.refreshUserInfo(285) - Информация о пользователе получена.
+2018-03-11 23:30:56 INFO  ApacheHttpClient.startGA(31) - GAService запущен.
+2018-03-11 23:30:56 INFO  AbstractRestApiClient.startService(70) - EventsService запущен.
+2018-03-11 23:31:08 INFO  ApacheHttpClient.getWebResourceAsStream(427) - responseCode = 200
+2018-03-11 23:31:08 INFO  ApacheHttpClient.getFilteredTasks(314) - responseCode = 200
+2018-03-11 23:31:20 INFO  ApacheHttpClient.getWebResourceAsStream(427) - responseCode = 200
+2018-03-11 23:31:20 INFO  ApacheHttpClient.getFilteredTasks(314) - responseCode = 200
+2018-03-11 23:31:21 INFO  ApacheHttpClient.getTaskTemplateInfo(331) - responseCode = 200
+2018-03-11 23:31:23 INFO  ApacheHttpClient.testConnection(184) - responseCode = 200
+2018-03-11 23:31:23 INFO  ApacheHttpClient.testConnection(192) - result = true
+2018-03-11 23:31:23 INFO  ApacheHttpClient.testConnection(184) - responseCode = 200
+2018-03-11 23:31:23 INFO  ApacheHttpClient.testConnection(192) - result = true
+2018-03-11 23:31:23 INFO  ApacheHttpClient.getWebResourceAsStream(427) - responseCode = 200
+2018-03-11 23:31:56 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:32:56 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:33:56 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:34:21 INFO  ApacheHttpClient.testConnection(184) - responseCode = 200
+2018-03-11 23:34:21 INFO  ApacheHttpClient.testConnection(192) - result = true
+2018-03-11 23:34:56 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:35:56 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:36:56 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:37:56 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200
+2018-03-11 23:38:22 INFO  ApacheHttpClient.getWebResourceAsStream(427) - responseCode = 200
+2018-03-11 23:38:22 INFO  ApacheHttpClient.getWebResourceAsStream(427) - responseCode = 200
+2018-03-11 23:38:43 ERROR ApacheHttpClient.getTask(417) - Ошибка во время выгрузки задачи. Убедитесь в доступности сети и попробуйте снова. : java.util.concurrent.ExecutionException
+2018-03-11 23:38:43 ERROR TaskFailed.run(19) - Запрос проверки задания был завершен некорректно. Убедитесь в доступности сети и попробуйте снова. : java.net.ConnectException
+2018-03-11 23:38:56 INFO  ApacheHttpClient.sendEvent(457) - responseCode = 200

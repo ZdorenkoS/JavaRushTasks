@@ -9,11 +9,16 @@ public class Solution {
     }
 
     public static String getPartOfString(String string) {
+        String []s = string.split(" ");
+        StringBuilder sb = new StringBuilder();
+        if (s.length<3) throw new TooShortStringException();
+        for (int i = 1; i <5 ; i++) {
+            sb.append(s[i]+" ");
+        }
 
-
-        return null;
+        return  sb.toString().trim();
     }
 
-    public static class TooShortStringException extends RuntimeException{
+    public static class TooShortStringException extends RuntimeException {
     }
 }
