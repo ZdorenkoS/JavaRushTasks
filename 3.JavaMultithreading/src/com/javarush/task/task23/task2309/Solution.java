@@ -22,13 +22,57 @@ public class Solution {
         }
     }
 
-    public List<User> getUsers{
-
-        return new AbstractDbSelectExecutor<User>().execute();
+    public List<User> getUsers() {
+        return new AbstractDbSelectExecutor<User>() {
+            @Override
+            public String getQuery() {
+                String s = this.getClass().getGenericSuperclass().toString();
+                return "SELECT * FROM " + s.substring(s.lastIndexOf('.') + 1, s.length() - 1).toUpperCase();
+            }
+        }.execute();
     }
-    public List<Location> getLocations{}
-    public List<Server> getServers{}
-    public List<Subject> getSubjects{}
-    public List<Subscription> getSubscriptions{}
+
+    public List<Location> getLocations() {
+        return new AbstractDbSelectExecutor<Location>() {
+            @Override
+            public String getQuery() {
+                String s = this.getClass().getGenericSuperclass().toString();
+                return "SELECT * FROM " + s.substring(s.lastIndexOf('.') + 1, s.length() - 1).toUpperCase();
+            }
+        }.execute();
+    }
+
+    public List<Server> getServers() {
+        return new AbstractDbSelectExecutor<Server>() {
+            @Override
+            public String getQuery() {
+                String s = this.getClass().getGenericSuperclass().toString();
+                return "SELECT * FROM " + s.substring(s.lastIndexOf('.') + 1, s.length() - 1).toUpperCase();
+            }
+        }.execute();
+    }
+
+    public List<Subject> getSubjects() {
+        return new AbstractDbSelectExecutor<Subject>() {
+            @Override
+            public String getQuery() {
+                String s = this.getClass().getGenericSuperclass().toString();
+                return "SELECT * FROM " + s.substring(s.lastIndexOf('.') + 1, s.length() - 1).toUpperCase();
+            }
+        }.execute();
+    }
+
+    public List<Subscription> getSubscriptions() {
+        return new AbstractDbSelectExecutor<Subscription>() {
+            @Override
+            public String getQuery() {
+                String s = this.getClass().getGenericSuperclass().toString();
+                return "SELECT * FROM " + s.substring(s.lastIndexOf('.') + 1, s.length() - 1).toUpperCase();
+            }
+        }.execute();
+    }
+
+
 
 }
+// Id=5, name='User-5', description=Got by executing 'SELECT * FROM USER'

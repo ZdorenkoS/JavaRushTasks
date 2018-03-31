@@ -10,6 +10,7 @@ public abstract class AbstractDbSelectExecutor<T extends NamedItem> {
 
     public abstract String getQuery();
 
+
     /**
      * It's fake method
      *
