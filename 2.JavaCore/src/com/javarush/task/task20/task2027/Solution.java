@@ -1,5 +1,6 @@
 package com.javarush.task.task20.task2027;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /* 
@@ -15,6 +16,7 @@ public class Solution {
                 {'p', 'o', 'e', 'e', 'j', 'j'}
         };
         detectAllWords(crossword, "home", "same");
+
         /*
 Ожидаемый результат
 home - (5, 3) - (2, 0)
@@ -23,9 +25,39 @@ same - (1, 1) - (4, 1)
     }
 
     public static List<Word> detectAllWords(int[][] crossword, String... words) {
+            List<Word> list = new ArrayList<>();
 
-        return null;
+        //список слов для которых найдена первая буква
+        ArrayList<Word> firstLetter = new ArrayList<>();
+
+        // ищем первую букву и записываем в firstLetter Word с координатами первой буквы
+        for (String s :words) {
+            for (int i = 0; i <crossword.length ; i++) {
+                for (int j = 0; j <crossword[i].length ; j++) {
+                    if (s.charAt(0) == crossword[i][j]) {
+                       Word w = new Word(s);
+                       w.startX=j;
+                       w.startY=i;
+                       firstLetter.add(w);
+                    }
+                }
+            }
+        }
+
+        // ищем конец слова
+        for (Word w:firstLetter) {
+
+        }
+
+
+
+
+
+        return list;
     }
+
+
+
 
     public static class Word {
         private String text;
