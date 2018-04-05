@@ -1,9 +1,10 @@
+package com.javarush.task.task20.task2025;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Solution1 {
+public class ArmstrongNumbersMultiSetLongOpt {
     private static int N;
     private static int[] digitsMultiSet;
     private static int[] testMultiSet;
@@ -77,7 +78,7 @@ public class Solution1 {
     }
 
     public static List<Long> generate(int maxN) {
-        if (maxN > 20) throw new IllegalArgumentException();
+        if (maxN >= 20) throw new IllegalArgumentException();
 
         genPows(maxN);
         results = new ArrayList<>();
@@ -98,7 +99,7 @@ public class Solution1 {
 
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        List<Long> list = generate(20);
+        List<Long> list = generate(9);
         long finish = System.currentTimeMillis();
         System.out.println("Time consumed: " + (finish - start) + " ms");
         System.out.println(list.size());
