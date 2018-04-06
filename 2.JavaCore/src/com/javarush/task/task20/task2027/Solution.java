@@ -15,8 +15,11 @@ public class Solution {
                 {'m', 'l', 'p', 'r', 'r', 'h'},
                 {'p', 'o', 'e', 'e', 'j', 'j'}
         };
-        detectAllWords(crossword, "home", "same");
-
+        ArrayList<Word> list=(ArrayList<Word>)  detectAllWords(crossword, "home", "same");
+        for (Word w:list) {
+            System.out.println(w.text+w.startX+w.startY+w.endX+w.endY);
+        }
+        
         /*
 Ожидаемый результат
 home - (5, 3) - (2, 0)
@@ -46,17 +49,23 @@ same - (1, 1) - (4, 1)
 
         // ищем конец слова
         for (Word w:firstLetter) {
-
+            Solution s = new Solution();
+            Word word =s.findLast(crossword,w,1,-1,-1);
+            if (word!=null)list.add(word);
         }
-
-
-
-
-
         return list;
     }
-
-
+        // ищем координаты конца слова, передаем обьект, массив, z - номер буквы в слове(стартуем с 1),
+        // и принцип изменения x и y (1 - увеличиваем, 0 - не меняем, -1 - уменьшаем)
+    public Word findLast(int[][] crossword, Word w, int z, int x, int y){
+      try{
+       if(crossword[w.startY+y][w.startX+x]==w.text.charAt(z)) {
+           if (z==w.text.length()) {w.endX=x; w.endY=y;}
+            else   findLast(crossword,w,z+1,x+x,y+y);
+       } else return null;}
+       catch (ArrayIndexOutOfBoundsException e){}
+        return w;
+    }
 
 
     public static class Word {
