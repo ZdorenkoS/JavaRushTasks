@@ -15,11 +15,9 @@ public class Solution {
                 {'m', 'l', 'p', 'r', 'r', 'h'},
                 {'p', 'o', 'e', 'e', 'j', 'j'}
         };
-        ArrayList<Word> list=(ArrayList<Word>)  detectAllWords(crossword, "home", "same");
-        for (Word w:list) {
-            System.out.println(w.text+w.startX+w.startY+w.endX+w.endY);
-        }
-        
+                detectAllWords(crossword, "home", "same");
+
+
         /*
 Ожидаемый результат
 home - (5, 3) - (2, 0)
@@ -30,41 +28,45 @@ same - (1, 1) - (4, 1)
     public static List<Word> detectAllWords(int[][] crossword, String... words) {
             List<Word> list = new ArrayList<>();
 
-        //список слов для которых найдена первая буква
-        ArrayList<Word> firstLetter = new ArrayList<>();
-
-        // ищем первую букву и записываем в firstLetter Word с координатами первой буквы
+        // ищем первую букву
         for (String s :words) {
             for (int i = 0; i <crossword.length ; i++) {
                 for (int j = 0; j <crossword[i].length ; j++) {
                     if (s.charAt(0) == crossword[i][j]) {
                        Word w = new Word(s);
-                       w.startX=j;
-                       w.startY=i;
-                       firstLetter.add(w);
+                       w.setStartPoint(j,i);
+                        // указываем координаты за пределами массива, чтобы потом отфильтровать слова (есть первая буква, но нет слова полностью)
+                        w.setEndPoint(-1,-1);
+                        Solution solution = new Solution();
+                        // вызываем findLast который проверяет слово и устанавливает координаты последней буквы
+                        solution.findLast(crossword, w, w.startX, w.startY, 1,  0,  1);
+                        solution.findLast(crossword, w, w.startX, w.startY, 1,  0, -1);
+                        solution.findLast(crossword, w, w.startX, w.startY, 1,  1,  0);
+                        solution.findLast(crossword, w, w.startX, w.startY, 1, -1,  0);
+                        solution.findLast(crossword, w, w.startX, w.startY, 1, -1, -1);
+                        solution.findLast(crossword, w, w.startX, w.startY, 1, -1,  1);
+                        solution.findLast(crossword, w, w.startX, w.startY, 1,  1,  1);
+                        solution.findLast(crossword, w, w.startX, w.startY, 1,  1, -1);
+                        // если слово имеет корректные координаты добавляем в список
+                        if (w.endX!=-1&& w.endY!=-1) list.add(w);
                     }
                 }
             }
         }
-
-        // ищем конец слова
-        for (Word w:firstLetter) {
-            Solution s = new Solution();
-            Word word =s.findLast(crossword,w,1,-1,-1);
-            if (word!=null)list.add(word);
-        }
         return list;
     }
-        // ищем координаты конца слова, передаем обьект, массив, z - номер буквы в слове(стартуем с 1),
-        // и принцип изменения x и y (1 - увеличиваем, 0 - не меняем, -1 - уменьшаем)
-    public Word findLast(int[][] crossword, Word w, int z, int x, int y){
-      try{
-       if(crossword[w.startY+y][w.startX+x]==w.text.charAt(z)) {
-           if (z==w.text.length()) {w.endX=x; w.endY=y;}
-            else   findLast(crossword,w,z+1,x+x,y+y);
-       } else return null;}
+        // передаем массив, обьект, координаты первой буквы, номер символа text который проверяем, направление смещения
+    public void findLast(int[][] crossword, Word w, int startX, int startY, int z, int x, int y){
+        try{
+            // если символ с заданным смещением равен следующему символу в text - продолжаем проверку
+          if(crossword[startY+y][startX+x]==w.text.charAt(z)) {
+              // если проверили последний символ в Word.text устанавливаем ему endX и endY и возращаем метод возвращает true
+           if (z==w.text.length()-1) {w.setEndPoint(startX + x, startY + y);}
+            else
+                // метод вызывает сам себя с новыми параметрами
+                findLast(crossword,w,startX+x ,startY+y,++z,x,y);
+       } }
        catch (ArrayIndexOutOfBoundsException e){}
-        return w;
     }
 
 
