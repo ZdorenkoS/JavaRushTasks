@@ -27,8 +27,6 @@ same - (1, 1) - (4, 1)
 
     public static List<Word> detectAllWords(int[][] crossword, String... words) {
             List<Word> list = new ArrayList<>();
-
-        // ищем первую букву
         for (String s :words) {
             for (int i = 0; i <crossword.length ; i++) {
                 for (int j = 0; j <crossword[i].length ; j++) {
@@ -60,7 +58,7 @@ same - (1, 1) - (4, 1)
         try{
             // если символ с заданным смещением равен следующему символу в text - продолжаем проверку
           if(crossword[startY+y][startX+x]==w.text.charAt(z)) {
-              // если проверили последний символ в Word.text устанавливаем ему endX и endY и возращаем метод возвращает true
+              // если проверили последний символ в text устанавливаем ему endX и endY
            if (z==w.text.length()-1) {w.setEndPoint(startX + x, startY + y);}
             else
                 // метод вызывает сам себя с новыми параметрами
