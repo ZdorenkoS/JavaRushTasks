@@ -3360,3 +3360,19 @@
 2018-04-10 22:30:57 INFO  ApacheHttpClient.sendEvent(464) - responseCode = 200
 2018-04-10 22:31:57 INFO  ApacheHttpClient.sendEvent(464) - responseCode = 200
 2018-04-10 22:32:57 INFO  ApacheHttpClient.sendEvent(464) - responseCode = 200
+2018-04-24 13:01:49 INFO  JavaRushTasksProjectComponent.projectOpened(68) - ---------- Project JavaRushTasks opened ----------
+2018-04-24 13:01:49 INFO  JavaRushTasksProjectComponent.projectOpened(69) - ---------- Version 3.16 ----------
+
+2018-04-24 13:01:49 INFO  JavaRushTasksProjectComponent.setAutoscrolls(343) - Autoscrolls успешно установлены
+2018-04-24 13:01:49 INFO  ApacheHttpClient.createAsyncHttpClient(130) - Выбрано 1 прокси. Тип : DIRECT
+2018-04-24 13:01:49 INFO  ApacheHttpClient.<init>(88) - ApacheHttpClient проинстанциирован успешно.
+2018-04-24 13:01:50 INFO  ApacheHttpClient.testConnection(188) - responseCode = 200
+2018-04-24 13:01:50 INFO  ApacheHttpClient.testConnection(196) - result = true
+2018-04-24 13:01:52 INFO  ApacheHttpClient.login(220) - Ожидание ответа сервера.
+2018-04-24 13:01:52 INFO  ApacheHttpClient.login(224) - responseCode = 200
+2018-04-24 13:01:52 INFO  ApacheHttpClient.login(255) - JSESSIONID=4CF74E2FE2B08DFBC459FB6B3F9FF590
+2018-04-24 13:01:52 INFO  ApacheHttpClient.refreshUserInfo(283) - responseCode = 200
+2018-04-24 13:01:52 INFO  ApacheHttpClient.refreshUserInfo(289) - Информация о пользователе получена.
+2018-04-24 13:01:52 INFO  ApacheHttpClient.startGA(31) - GAService запущен.
+2018-04-24 13:01:52 INFO  AbstractRestApiClient.startService(70) - EventsService запущен.
+2018-04-24 13:02:52 INFO  ApacheHttpClient.sendEvent(464) - responseCode = 200
