@@ -21,10 +21,6 @@ public class Solution {
            System.out.println(name + " item " + countItems);}
        };
 
-
-
-
-
        // class LocalIterator implements Iterator {
        //     public LocalIterator() {
        //         countItems++;
