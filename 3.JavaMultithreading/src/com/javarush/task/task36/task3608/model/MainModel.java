@@ -4,9 +4,15 @@ import com.javarush.task.task36.task3608.bean.User;
 import com.javarush.task.task36.task3608.model.service.UserService;
 import com.javarush.task.task36.task3608.model.service.UserServiceImpl;
 
+import java.util.List;
+
 public class MainModel implements Model {
    private UserService userService =new UserServiceImpl();
    private ModelData modelData = new ModelData();
+
+    private List<User> getAllUsers() {
+        return userService.filterOnlyActiveUsers(userService.getUsersBetweenLevels(1, 100));
+    }
 
    @Override
     public ModelData getModelData() {
@@ -15,8 +21,8 @@ public class MainModel implements Model {
 
     @Override
     public void loadUsers() {
-        modelData.setDisplayDeletedUserList(false);
-        modelData.setUsers(userService.getUsersBetweenLevels(1, 100));
+       modelData.setDisplayDeletedUserList(false);
+        modelData.setUsers(getAllUsers());
     }
 
     @Override
@@ -31,4 +37,10 @@ public class MainModel implements Model {
         User user = userService.getUsersById(userId);
         modelData.setActiveUser(user);
     }
+
+    @Override
+    public void deleteUserById(long id){
+       userService.deleteUser(id);
+       loadUsers();
+       }
 }

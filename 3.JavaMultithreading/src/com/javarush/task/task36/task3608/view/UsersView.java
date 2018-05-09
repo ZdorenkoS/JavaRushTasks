@@ -20,10 +20,13 @@ public class UsersView implements View {
         this.controller=controller;
     }
     public void fireEventShowAllUsers(){
-        controller.onShowAllUsers();
+
+       controller.onShowAllUsers();
     }
     public void fireEventShowDeletedUsers() {controller.onShowAllDeletedUsers();}
     public void fireEventOpenUserEditForm(long id) {
         controller.onOpenUserEditForm(id);
     }
+
+
 }
