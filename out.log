@@ -311,3 +311,8 @@ Caused by: com.intellij.openapi.vcs.VcsException: fatal: git rm: 'out.log': Inva
 2018-05-10 15:58:45 INFO  ApacheHttpClient.getWebResourceAsStream(436) - responseCode = 200
 2018-05-10 15:58:46 INFO  ApacheHttpClient.completed(27) - responseCode = 200
 2018-05-10 15:58:46 INFO  ApacheHttpClient.getTask(421) - responseCode = 200
+2018-05-10 15:59:18 INFO  ApacheHttpClient.sendEvent(469) - responseCode = 200
+2018-05-10 16:00:18 INFO  ApacheHttpClient.sendEvent(469) - responseCode = 200
+2018-05-10 16:01:18 INFO  ApacheHttpClient.sendEvent(469) - responseCode = 200
+2018-05-10 16:02:18 INFO  ApacheHttpClient.sendEvent(469) - responseCode = 200
+2018-05-10 16:03:18 INFO  ApacheHttpClient.sendEvent(469) - responseCode = 200
