@@ -22,7 +22,7 @@ public class MainModel implements Model {
     @Override
     public void loadUsers() {
        modelData.setDisplayDeletedUserList(false);
-        modelData.setUsers(getAllUsers());
+       modelData.setUsers(getAllUsers());
     }
 
     @Override
@@ -43,4 +43,9 @@ public class MainModel implements Model {
        userService.deleteUser(id);
        loadUsers();
        }
+
+   public void changeUserData(String name, long id, int level){
+       userService.createOrUpdateUser(name,id,level);
+       loadUsers();
+   }
 }
