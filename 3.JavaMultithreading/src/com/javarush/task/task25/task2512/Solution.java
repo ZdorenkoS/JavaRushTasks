@@ -9,7 +9,6 @@ public class Solution implements Thread.UncaughtExceptionHandler {
     public void uncaughtException(Thread t, Throwable e) {
         t.interrupt();
         printException(e);
-
     }
 
     public static void printException(Throwable e){
