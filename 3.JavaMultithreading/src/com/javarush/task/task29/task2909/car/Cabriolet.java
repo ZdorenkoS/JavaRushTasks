@@ -4,4 +4,9 @@ public class Cabriolet extends Car{
     public Cabriolet(int numberOfPassengers) {
         super(numberOfPassengers);
     }
+
+    static public final int MAX_CABRIOLET_SPEED = 90;
+    public int  getMaxSpeed() {
+        return MAX_CABRIOLET_SPEED;
+    }
 }
