@@ -64,8 +64,33 @@ public class Server {
             for (Map.Entry<String, Connection> map:connectionMap.entrySet()) {
                 if (map.getKey()==userName) continue;
                 connection.send(new Message(MessageType.USER_ADDED, map.getKey()));
-
             }
         }
+
+        private void serverMainLoop(Connection connection, String userName) throws IOException, ClassNotFoundException{
+           while (true) {
+               Message m = connection.receive();
+               if (m.getType() == MessageType.TEXT)
+                   sendBroadcastMessage(new Message(MessageType.TEXT, userName + ": " + m.getData()));
+               else ConsoleHelper.writeMessage("Error");
+           }
+        }
+
+        @Override
+        public void run() {
+            ConsoleHelper.writeMessage("Connection with "+ socket.getRemoteSocketAddress());
+            String userName=null;
+            try (Connection connection = new Connection(socket);) {
+                userName= serverHandshake(connection);
+                sendBroadcastMessage(new Message(MessageType.USER_ADDED, userName));
+                sendListOfUsers(connection,userName);
+                serverMainLoop(connection,userName);
+            }
+                catch (IOException e){ConsoleHelper.writeMessage(e.getMessage());}
+                catch(ClassNotFoundException e){ConsoleHelper.writeMessage(e.getMessage());}
+            if (userName!=null) {connectionMap.remove(userName);
+                sendBroadcastMessage(new Message(MessageType.USER_REMOVED,userName));}
+            ConsoleHelper.writeMessage("Connection with " + socket.getRemoteSocketAddress()+" closed");
+       }
     }
 }
